@@ -1,5 +1,41 @@
 const apiUrl = 'https://api.hypixel.net/v2/resources/skyblock/election';
 
+const colorMap = {
+    '0': '#000000', // Black
+    '1': '#0000AA', // Dark Blue
+    '2': '#00AA00', // Dark Green
+    '3': '#00AAAA', // Dark Aqua
+    '4': '#AA0000', // Dark Red
+    '5': '#AA00AA', // Dark Purple
+    '6': '#FFAA00', // Gold
+    '7': '#AAAAAA', // Gray
+    '8': '#555555', // Dark Gray
+    '9': '#5555FF', // Blue
+    'a': '#55FF55', // Green
+    'b': '#55FFFF', // Aqua
+    'c': '#FF5555', // Red
+    'd': '#FF55FF', // Light Purple
+    'e': '#FFFF55', // Yellow
+    'f': '#FFFFFF', // White
+};
+
+const mayorImageMap = {
+    'Aatrox': 'Aatrox_Sprite.webp',
+    'Diana': 'Diana_Sprite.webp',
+    'Paul': 'Paul_Sprite.webp',
+    'Marina': 'Marina_Sprite.webp',
+    'Cole': 'Cole_Sprite.webp',
+    'Foxy': 'Foxy_Sprite.webp',
+    'Scorpius': 'Scorpius_Sprite.webp',
+    'Jerry': 'Villager_Sprite.webp',
+    'Derpy': 'Derpy_Sprite.webp',
+    'Finnegan': 'Finnegan_Sprite.webp',
+    'Diaz': 'Diaz_Sprite.webp',
+    'Barry': 'Barry_Sprite.webp',
+    'Dante': 'Dante_Sprite.webp',
+    'Technoblade': 'Technoshop_Sprite.webp'
+};
+
 function convertMinecraftColors(text) {
     return text.replace(/§([0-9a-f])/g, (match, colorCode) => {
         const color = colorMap[colorCode.toLowerCase()] || '#FFFFFF';
