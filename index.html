@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel Skyblock Election</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hypixel Skyblock Election</h1>
+        </header>
+
+        <main>
+            <section id="mayor-container" class="card">
+                <h2>Current Mayor</h2>
+                <div class="content">
+                    <img id="mayor-img" src="" alt="Mayor Image" class="image"/>
+                    <div class="text-content">
+                        <h3 id="mayor-name" class="highlight"></h3>
+                        <h4>Perks</h4>
+                        <ul id="mayor-perks" class="perks-list"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="minister-container" class="card">
+                <h2>Minister</h2>
+                <div class="content">
+                    <img id="minister-img" src="" alt="Minister Image" class="image"/>
+                    <div class="text-content">
+                        <h3 id="minister-name" class="highlight"></h3>
+                        <h4>Perk</h4>
+                        <p id="minister-perk"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="candidates-container" class="card">
+                <h2>Next Election Candidates</h2>
+                <div id="candidates" class="candidates-grid"></div>
+            </section>
+            <section id="notification-container" class="card">
+                <h2>Select Mayor for Notifications</h2>
+                <div class="content">
+                    <select id="mayor-select">
+                        <option value="">--Select Mayor--</option>
+                        <option value="Aatrox">Aatrox</option>
+                        <option value="Diana">Diana</option>
+                        <option value="Paul">Paul</option>
+                        <option value="Marina">Marina</option>
+                        <option value="Cole">Cole</option>
+                        <option value="Foxy">Foxy</option>
+                        <option value="Scorpius">Scorpius</option>
+                        <option value="Jerry">Jerry</option>
+                        <option value="Derpy">Derpy</option>
+                        <option value="Finnegan">Finnegan</option>
+                        <option value="Diaz">Diaz</option>
+                        <option value="Barry">Barry</option>
+                        <option value="Dante">Dante</option>
+                        <option value="Technoblade">Technoblade</option>
+                    </select>
+                    <button id="save-selection">Save Selection</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
