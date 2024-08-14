@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 30px;
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card {
+    margin-bottom: 30px;
+    border-radius: 16px;
+    background-color: #292929;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.card h2 {
+    background-color: #009688;
+    border-radius: 16px 16px 0 0;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.card .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    align-items: center;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 5px solid #009688;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 150, 136, 0.5);
+}
+
+.text-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.highlight {
+    color: #009688;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.perks-list {
+    list-style-type: none;
+    padding-left: 0;
+    color: #e0e0e0;
+}
+
+.perks-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.perks-list li::before {
+    content: '• ';
+    color: #009688;
+    font-size: 1.4em;
+    margin-right: 8px;
+}
+
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.candidate {
+    background-color: #292929;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.candidate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.candidate img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #009688;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.candidate img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 150, 136, 0.5);
+}
+
+.candidate h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.candidate .votes {
+    font-weight: bold;
+    color: #009688;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.candidate ul {
+    list-style-type: none;
+    padding: 0;
+    color: #e0e0e0;
+    text-align: left;
+    font-size: 1em;
+}
+
+.candidate li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.candidate li span {
+    font-weight: bold;
+    color: #009688;
+}
+
+#notification-container {
+    margin-top: 20px;
+}
+
+#mayor-select {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#save-selection {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#save-selection:hover {
+    background-color: #00796b;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+@media (max-width: 768px) {
+    .card .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .highlight {
+        font-size: 1.8em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card .content {
+        padding: 15px;
+    }
+
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .highlight {
+        font-size: 1.6em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .card h2 {
+        font-size: 1.3em;
+    }
+
+    .candidate img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .candidate h3 {
+        font-size: 1.2em;
+    }
+
+    .candidate .votes {
+        font-size: 1em;
+    }
+}
